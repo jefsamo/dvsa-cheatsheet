@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible CRUD Example</title>
+    <link rel="stylesheet" href="crud.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Product Manager</h1>
+      <section aria-labelledby="form-heading">
+        <h2 id="form-heading">Add Product</h2>
+
+        <form id="productForm">
+          <input type="hidden" id="productId" />
+          <label for="name">Product name</label>
+          <input type="text" name="name" id="name" />
+
+          <label for="price">Price</label>
+          <input type="number" name="price" id="price" />
+
+          <button type="submit" id="btnSave">Save product</button>
+        </form>
+
+        <p id="message" aria-live="polite"></p>
+      </section>
+
+      <section aria-labelledby="list-heading">
+        <h2 id="list-heading">Products</h2>
+        <ul id="productList"></ul>
+    </main>
+    <script src="crud.js"></script>
+  </body>
+</html>
